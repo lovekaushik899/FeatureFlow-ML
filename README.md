@@ -1,11 +1,3 @@
-Below is your **edited README.md with the requested additions**:
-
-* ✅ Added **PyPI installation command**
-* ✅ Added **PyPI project link**
-* ✅ Slightly adjusted the installation section so it reads naturally
-
-You can **replace your current README.md with this updated section**.
-
 ---
 
 # FeatureFlow-ML
