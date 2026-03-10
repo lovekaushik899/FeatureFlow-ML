@@ -728,5 +728,3 @@ For issues, questions, or suggestions:
 **Version:** 2.0.0  
 **Last Updated:** 2026-03-09  
 **Maintainer:** Love Kaushik (@lovekaushik899)
-# FeatureFlow-ML
-FeatureFlow-ML provides automated ML pipelines for classification and regression, integrating statistical analysis, missing value detection, outlier identification, feature filtering, normalization, cross-validated model evaluation, and feature importance analysis for reproducible preprocessing workflows from beginners to advanced practitioners.
