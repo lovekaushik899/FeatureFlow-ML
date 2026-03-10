@@ -4,9 +4,11 @@
 
 A comprehensive machine learning framework providing optimized classification and regression pipelines with automated feature engineering, preprocessing, and model evaluation capabilities.
 
-## 🎯 Overview
+---
 
-FeatureFlow-ML streamlines machine learning workflows by providing production-ready pipelines for both classification and regression tasks. It abstracts away boilerplate code while maintaining full flexibility for custom configurations and advanced use cases.
+# 🎯 Overview
+
+FeatureFlow-ML streamlines machine learning workflows by providing production-ready pipelines for both classification and regression tasks. It abstracts away boilerplate code while maintaining flexibility for custom configurations and advanced use cases.
 
 **Key Strengths:**
 
@@ -17,9 +19,11 @@ FeatureFlow-ML streamlines machine learning workflows by providing production-re
 * 📈 **Performance Tracking**: Built-in evaluation and metrics
 * 🔍 **Interpretability**: Feature importance and model explanations
 
-## 📦 PyPI Package
+---
 
-FeatureFlow-ML is now available on **PyPI** and can be installed directly using pip.
+# 📦 PyPI Package
+
+FeatureFlow-ML is available on **PyPI** and can be installed directly using pip.
 
 🔗 PyPI Page
 [https://pypi.org/project/featureflow-ml/0.1.0/](https://pypi.org/project/featureflow-ml/0.1.0/)
@@ -38,21 +42,21 @@ or inside Jupyter/Colab:
 
 ---
 
-## 📋 Table of Contents
+# 📋 Table of Contents
 
-* [Quick Start](#quick-start)
-* [Installation](#installation)
-* [Core Modules](#core-modules)
-* [Classification Pipeline](#classification-pipeline)
-* [Regression Pipeline](#regression-pipeline)
-* [Advanced Usage](#advanced-usage)
-* [API Reference](#api-reference)
-* [Algorithm Comparison](#algorithm-comparison)
-* [Performance Optimization](#performance-optimization)
-* [Troubleshooting](#troubleshooting)
-* [Best Practices](#best-practices)
-* [Examples](#examples)
-* [Contributing](#contributing)
+* Quick Start
+* Installation
+* Core Modules
+* Classification Pipeline
+* Regression Pipeline
+* Advanced Usage
+* API Reference
+* Algorithm Comparison
+* Performance Optimization
+* Troubleshooting
+* Best Practices
+* Examples
+* Contributing
 
 ---
 
@@ -65,10 +69,14 @@ from classification_pipeline import ClassificationPipeline
 
 pipeline = ClassificationPipeline(model_type='random_forest')
 pipeline.fit(X_train, y_train)
+
 predictions = pipeline.predict(X_test)
+
 accuracy = pipeline.evaluate(X_test, y_test)
 print(f"Accuracy: {accuracy:.4f}")
 ```
+
+---
 
 ### Regression in 5 Lines
 
@@ -77,7 +85,9 @@ from regression_pipeline import RegressionPipeline
 
 pipeline = RegressionPipeline(model_type='xgboost')
 pipeline.fit(X_train, y_train)
+
 predictions = pipeline.predict(X_test)
+
 r2_score = pipeline.evaluate(X_test, y_test)
 print(f"R² Score: {r2_score:.4f}")
 ```
@@ -86,12 +96,14 @@ print(f"R² Score: {r2_score:.4f}")
 
 # 📦 Installation
 
-### Prerequisites
+## Prerequisites
 
 * Python 3.8+
 * pip or conda
 
-### Install from PyPI (Recommended)
+---
+
+## Install from PyPI (Recommended)
 
 ```bash
 pip install featureflow-ml
@@ -103,7 +115,9 @@ or
 !pip install featureflow-ml
 ```
 
-### Install from Source
+---
+
+## Install from Source
 
 ```bash
 git clone https://github.com/lovekaushik899/FeatureFlow-ML.git
@@ -113,28 +127,73 @@ pip install -r requirements.txt
 
 ---
 
-### Dependencies
+# Alternative Usage (Direct Script Execution)
+
+Apart from installing the package through pip, users may also **directly copy the scripts from the repository and execute them independently**.
+
+This option is useful in environments where installing packages is restricted or when users want to run the pipelines as standalone scripts.
+
+---
+
+## Classification Pipeline
+
+```bash
+python3 classification_pipeline.py --input file.csv --target label --cores x
+```
+
+---
+
+## Regression Pipeline
+
+```bash
+python3 regression_pipeline.py --input file.csv --target label --cores x
+```
+
+---
+
+## CPU Core Usage
+
+The `--cores` parameter allows optional multi-threaded execution.
+
+* If `--cores` is **not specified**, the pipeline runs using **1 CPU thread by default**.
+* If a value is specified, the pipeline utilizes the provided number of CPU cores.
+
+This allows FeatureFlow-ML to run efficiently on:
+
+* **Resource-constrained environments** (e.g., laptops or small servers)
+* **High-performance computing (HPC) environments** where multiple CPU cores are available.
+
+---
+
+# Dependencies
 
 ```bash
 pip install numpy pandas scikit-learn xgboost lightgbm matplotlib seaborn
 ```
 
-**Dependency Breakdown:**
+### Dependency Breakdown
 
-* `numpy` - Numerical computations
-* `pandas` - Data manipulation and analysis
-* `scikit-learn` - Machine learning algorithms and utilities
-* `xgboost` - Gradient boosting framework
-* `lightgbm` - Light gradient boosting
-* `matplotlib`, `seaborn` - Visualization
+**numpy**
+Numerical computations and array operations.
+
+**pandas**
+Data manipulation and tabular data processing.
+
+**scikit-learn**
+Machine learning algorithms and utilities.
+
+**xgboost**
+Gradient boosting framework.
+
+**lightgbm**
+Efficient gradient boosting implementation.
+
+**matplotlib / seaborn**
+Visualization and plotting libraries.
 
 ---
 
-*(Rest of your README remains unchanged from your original content — no modifications needed there.)*
-
----
-
-## Version Info
+# Version Info
 
 **Version:** 0.1.0
 **PyPI:** [https://pypi.org/project/featureflow-ml/0.1.0/](https://pypi.org/project/featureflow-ml/0.1.0/)
